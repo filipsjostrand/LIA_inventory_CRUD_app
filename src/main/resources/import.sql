@@ -1,0 +1,1 @@
+INSERT INTO ALIEN values (101, 'test')

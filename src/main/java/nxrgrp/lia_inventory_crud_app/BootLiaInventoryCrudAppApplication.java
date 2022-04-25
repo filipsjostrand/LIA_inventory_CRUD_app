@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LiaInventoryCrudAppApplication {
+public class BootLiaInventoryCrudAppApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LiaInventoryCrudAppApplication.class, args);
+        SpringApplication.run(BootLiaInventoryCrudAppApplication.class, args);
     }
 
 }
