@@ -2,14 +2,15 @@ package nxrgrp.lia_inventory_crud_app.controller;
 
 //import nxrgrp.lia_inventory_crud_app.repository.GreetingRepository;
 //import nxrgrp.lia_inventory_crud_app.entities.Greeting;
-import nxrgrp.lia_inventory_crud_app.entities.Greeting;
+import nxrgrp.lia_inventory_crud_app.entities.Employee;
 import nxrgrp.lia_inventory_crud_app.repository.GreetingRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+// Greeting ersätts av "Employee"
 
 @RestController
 public class GreetingController {
@@ -41,10 +42,10 @@ public class GreetingController {
          */
 
         // Step 3: Return static list from database
-        List<Greeting> greetings = this.greetingRepository.findAll();
+        List<Employee> employees = this.greetingRepository.findAll();
         Random random = new Random();
-        int randomListIndex = random.nextInt(greetings.size());
-        return greetings.get(randomListIndex).getName();
+        int randomListIndex = random.nextInt(employees.size());
+        return employees.get(randomListIndex).getName();
     }
 
 }

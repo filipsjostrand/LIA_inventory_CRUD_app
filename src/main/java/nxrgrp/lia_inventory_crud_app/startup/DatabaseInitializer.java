@@ -1,6 +1,6 @@
 package nxrgrp.lia_inventory_crud_app.startup;
 
-import nxrgrp.lia_inventory_crud_app.entities.Greeting;
+import nxrgrp.lia_inventory_crud_app.entities.Employee;
 import nxrgrp.lia_inventory_crud_app.repository.GreetingRepository;
 import org.fastnate.generator.EntitySqlGenerator;
 import org.fastnate.generator.context.GeneratorContext;
@@ -36,9 +36,9 @@ public class DatabaseInitializer implements ApplicationRunner {
         greetings.add("Good evening.");
         greetings.add("It's nice to meet you.");
         greetings.add("It's a pleasure to meet you.");
-        List<Greeting> greetingList = greetings.stream().map(greeting
-                -> new Greeting(greeting)).collect(Collectors.toList());
-        this.generateInserSql(greetingList);
+        List<Employee> employeeList = greetings.stream().map(greeting
+                -> new Employee(greeting)).collect(Collectors.toList());
+        this.generateInserSql(employeeList);
         //this.greetingRepository.saveAll(greetingList);
     }
 
