@@ -11,6 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/*
+The GreetingController.java class is used to return greetings from the greeting()-method directly or
+from the getRandomGreeting()-method through the (database containing data from SQL-files in the db-migration-folder) GreetingRepository interface.
+*/
+
 @RestController
 public class GreetingController {
 

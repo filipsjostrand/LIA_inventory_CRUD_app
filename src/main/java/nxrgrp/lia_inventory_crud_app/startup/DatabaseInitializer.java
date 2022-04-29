@@ -16,6 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/*
+The DatabaseInitializer.java class starts when the application starts.
+The DatabaseInitializer()-method initiates a greetingRepository object?
+The "run"-method ensures that coded values are added to the greetings list.
+The values are sorted into a list and a generateInserSQL-object(?) named(?) greetingList is created.
+A "printWriter"-object is created ...?
+*/
+
 @Component
 @Profile("does not exist")
 public class DatabaseInitializer implements ApplicationRunner {

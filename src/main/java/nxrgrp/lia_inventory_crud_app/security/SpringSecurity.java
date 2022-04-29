@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+// The SpringSecurity.java class is used to skip the log-in-functionality during testing.
+
     @Configuration
     public class SpringSecurity extends WebSecurityConfigurerAdapter {
 
