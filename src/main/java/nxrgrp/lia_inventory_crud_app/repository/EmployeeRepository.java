@@ -4,5 +4,5 @@ import nxrgrp.lia_inventory_crud_app.entities.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface GreetingRepository extends JpaRepository<Employee, Long> {
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 }

@@ -1,7 +1,7 @@
 package nxrgrp.lia_inventory_crud_app.startup;
 
 import nxrgrp.lia_inventory_crud_app.entities.Employee;
-import nxrgrp.lia_inventory_crud_app.repository.GreetingRepository;
+import nxrgrp.lia_inventory_crud_app.repository.EmployeeRepository;
 import org.fastnate.generator.EntitySqlGenerator;
 import org.fastnate.generator.context.GeneratorContext;
 import org.fastnate.generator.dialect.H2Dialect;
@@ -18,26 +18,29 @@ import java.util.stream.Collectors;
 
 @Component
 @Profile("does not exist")
+//public class DatabaseInitializer implements ApplicationRunner {
 public class DatabaseInitializer implements ApplicationRunner {
 
-    private final GreetingRepository greetingRepository;
+    private final EmployeeRepository employeeRepository;
 
-    public DatabaseInitializer(GreetingRepository greetingRepository) {
+    public DatabaseInitializer(EmployeeRepository employeeRepository) {
 
-        this.greetingRepository = greetingRepository;
+        this.employeeRepository = employeeRepository;
     }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        List<String> greetings = new ArrayList<>();
-        greetings.add("Hello!");
-        greetings.add("Good morning.");
-        greetings.add("Good afternoon.");
-        greetings.add("Good evening.");
-        greetings.add("It's nice to meet you.");
-        greetings.add("It's a pleasure to meet you.");
-        List<Employee> employeeList = greetings.stream().map(greeting
-                -> new Employee(greeting)).collect(Collectors.toList());
+        List<String> employees = new ArrayList<>();
+        employees.add("John", "...");
+        employees.add("Good morning.");
+        employees.add("Good afternoon.");
+        employees.add("Good evening.");
+        employees.add("It's nice to meet you.");
+        employees.add("It's a pleasure to meet you.");
+        List<Employee> employeeList = employees
+                .stream()
+                .map(employee -> new Employee(employee))
+                .collect(Collectors.toList());
         this.generateInserSql(employeeList);
         //this.greetingRepository.saveAll(greetingList);
     }
@@ -53,4 +56,3 @@ public class DatabaseInitializer implements ApplicationRunner {
         printWriter.close();
     }
 }
-
