@@ -2,9 +2,9 @@ package nxrgrp.lia_inventory_crud_app.startup;
 
 import nxrgrp.lia_inventory_crud_app.entities.Employee;
 import nxrgrp.lia_inventory_crud_app.repository.EmployeeRepository;
-import org.fastnate.generator.EntitySqlGenerator;
-import org.fastnate.generator.context.GeneratorContext;
-import org.fastnate.generator.dialect.H2Dialect;
+//import org.fastnate.generator.EntitySqlGenerator;
+//import org.fastnate.generator.context.GeneratorContext;
+//import org.fastnate.generator.dialect.H2Dialect;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Profile;
@@ -28,23 +28,21 @@ public class DatabaseInitializer implements ApplicationRunner {
         this.employeeRepository = employeeRepository;
     }
 
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         List<String> employees = new ArrayList<>();
-        employees.add("John", "...");
+        employees.add("John");
         employees.add("Good morning.");
-        employees.add("Good afternoon.");
-        employees.add("Good evening.");
-        employees.add("It's nice to meet you.");
-        employees.add("It's a pleasure to meet you.");
+
         List<Employee> employeeList = employees
                 .stream()
-                .map(employee -> new Employee(employee))
-                .collect(Collectors.toList());
-        this.generateInserSql(employeeList);
+                .map(employee -> new Employee(employee)).collect(Collectors.toList());
+        //this.generateInserSql(employeeList);
         //this.greetingRepository.saveAll(greetingList);
     }
 
+    /*
     public <E> void generateInserSql(final Iterable<? extends E> entities) throws IOException {
         PrintWriter printWriter = new PrintWriter(System.out);
         EntitySqlGenerator sqlGenerator = new EntitySqlGenerator(new GeneratorContext(
@@ -55,4 +53,5 @@ public class DatabaseInitializer implements ApplicationRunner {
         sqlGenerator.close();
         printWriter.close();
     }
+     */
 }

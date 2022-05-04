@@ -15,13 +15,13 @@ import java.util.Random;
 // Greeting ersätts av "Employee"
 
 @RestController
-@RequestMapping("api/")
+@RequestMapping("api/employees")
 public class EmployeeController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @GetMapping("employees")
+    @GetMapping()
     public List<Employee> getEmployees(){
         return this.employeeRepository.findAll();
     }
