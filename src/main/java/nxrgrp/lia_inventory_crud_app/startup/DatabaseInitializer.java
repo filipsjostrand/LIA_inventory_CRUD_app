@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/*
 @Component
 @Profile("does not exist")
 //public class DatabaseInitializer implements ApplicationRunner {
@@ -54,4 +55,4 @@ public class DatabaseInitializer implements ApplicationRunner {
         printWriter.close();
     }
      */
-}
+//}

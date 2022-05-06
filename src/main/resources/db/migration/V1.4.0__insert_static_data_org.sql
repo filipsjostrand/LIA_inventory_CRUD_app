@@ -1,0 +1,1 @@
+//INSERT INTO organization (id, location, name) VALUES (1, 'Jönköping', 'BU');
