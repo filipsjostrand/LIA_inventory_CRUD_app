@@ -19,13 +19,20 @@ public class Employee {
 
     //@OneToMany(mappedBy = "Organization",  fetch = FetchType.LAZY)
 
+
+    //@Column(name = "OrganizationId", unique = true, nullable = false)
+    //private int organization_id;
+
     // Tvingas sätta name = (annat än organization_id
-    @Column(name = "Org_Id", unique = true, nullable = false)
-    private int organization_id;
+    //@Column(name = "Org_Id", unique = true, nullable = false)
+    //private int organization_id;
 
     @Column(name = "Firstname", unique = true, nullable = false)
     private String first_name;
 
+
+    @Column(name = "Lastname", unique = true, nullable = false)
+    private String last_name;
 
     //@OneToMany(targetEntity = Organization.class, cascade = CascadeType.ALL)
     //@OneToMany(cascade = CascadeType.ALL)
@@ -37,31 +44,55 @@ public class Employee {
     //private Organization organization;
 
     // För att skapa Foreign Key, FK (organization_id) i Employee-tabellen
-    @ManyToOne
+    //@ManyToOne
+    //@JoinColumn(name = "organization_id")
+    //private Organization organization;
+                                                                        //(("BlogPost"))
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id")
     private Organization organization;
 
+    public Employee() {
+
+    }
+
     //Problem (2022-05-06): org_id & organization_id skapas av Flyway
 
+    public Employee(String first_name, String last_name, long organization_id) {
+        //super();
+        this.first_name = first_name;
+        this.last_name = last_name;
+    }
+
+    /*
     public Employee(int organization_id, String first_name) {
+        super();
         this.organization_id = organization_id;
         this.first_name = first_name;
     }
+    */
 
-    protected Employee() {
-    }
+    //protected Employee() {
+    //}
 
     public Long getId() {
         return id;
     }
 
+    /*
     public int getOrganization_id() {
         return organization_id;
     }
+     */
 
     public String getFirst_name() {
         return first_name;
     }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
 }
 
     /*

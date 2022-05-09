@@ -27,7 +27,7 @@ public class Organization {
     private List<Organization> organization;
     */
 
-    // För att skapa Foreign Key, FK (organization_id) i Employee-tabellen
+    // För att skapa Foreign Key, FK (organization_id) i Employee-tabellen  (("AppUser"))
     @OneToMany(mappedBy = "organization")
     @JsonIgnoreProperties("organization")
     private Set<Employee> employee;
@@ -38,12 +38,14 @@ public class Organization {
         this.location = location;
     }
 
-    protected Organization() {
+    public Organization() {
     }
 
     public Long getId() {
         return id;
     }
+
+    // ((public long getOrganizationId() {return organization_id = id};
 
     public String getName() {
         return name;

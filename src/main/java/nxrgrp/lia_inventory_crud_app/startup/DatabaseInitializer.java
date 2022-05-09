@@ -1,5 +1,7 @@
 package nxrgrp.lia_inventory_crud_app.startup;
 
+//Mappa ihop controllers & services
+
 import nxrgrp.lia_inventory_crud_app.entities.Employee;
 import nxrgrp.lia_inventory_crud_app.repository.EmployeeRepository;
 //import org.fastnate.generator.EntitySqlGenerator;

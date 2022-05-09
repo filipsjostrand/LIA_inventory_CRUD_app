@@ -1,14 +1,15 @@
 package nxrgrp.lia_inventory_crud_app.repository;
 
 import nxrgrp.lia_inventory_crud_app.entities.Employee;
+import nxrgrp.lia_inventory_crud_app.entities.Organization;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+public interface OrganizationRepository extends JpaRepository<Organization, Long> {
 
-   //List<Employee> findByEmployee_first_name(String first_name);
+    //List<Organization> findByOrganization_name(String name);
 
 }

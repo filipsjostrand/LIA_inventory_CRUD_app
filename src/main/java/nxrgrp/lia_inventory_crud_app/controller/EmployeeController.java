@@ -5,12 +5,17 @@ package nxrgrp.lia_inventory_crud_app.controller;
 //import nxrgrp.lia_inventory_crud_app.entities.Employee;
 //import nxrgrp.lia_inventory_crud_app.repository.EmployeeRepository;
 //import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import nxrgrp.lia_inventory_crud_app.entities.Employee;
+import nxrgrp.lia_inventory_crud_app.entities.Organization;
+import nxrgrp.lia_inventory_crud_app.repository.EmployeeRepository;
+import nxrgrp.lia_inventory_crud_app.repository.OrganizationRepository;
+import nxrgrp.lia_inventory_crud_app.service.EmployeeService;
+import nxrgrp.lia_inventory_crud_app.service.OrganizationService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 //import java.util.ArrayList;
-//import java.util.List;
+import java.util.List;
 //import java.util.Random;
 
 // Greeting ersätts av "Employee"
@@ -22,10 +27,21 @@ public EmployeeController() {}      - Konstruktor för att skapa employeeReposit
 
  */
 
+@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("api/employees")
 public class EmployeeController {
 
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    @GetMapping
+    public List<Employee> getEmployeeList() {
+
+        return employeeRepository.findAll();
+        //return "Hello Employee";
+    }
+}
     /*
     @Autowired
     private EmployeeRepository employeeRepository;
@@ -49,13 +65,37 @@ public class EmployeeController {
     }
 */
 
-    @GetMapping()
-    public String employee() {
+    //@Autowired
+    //private EmployeeRepository employeeRepository;
+
+    /*
+    EmployeeService employeeService;
+
+    public EmployeeController(EmployeeService employeeService){
+        this.employeeService = employeeService;
+
+    //@GetMapping(value = "employee")
+    @GetMapping
+    //public String employee() {
+        public List<Employee> getEmployeeList() {
+            return employeeService.findAll();
+        //return this.employeeRepository.findAll();
+        }
+*/
         // Step 1: Return Hello World!:
-        return "Hello World!";
+        //return "Hello World!";
         //return getRandomEmployee();
+
+        /*
+
+
+
+
     }
 
+
+}
+*/
 /*
     private String getRandomEmployee() {
         //Step 2: Return random greeting (stored in ArrayList):
@@ -79,5 +119,5 @@ public class EmployeeController {
 
 //        }
 
-}
+//}
 
