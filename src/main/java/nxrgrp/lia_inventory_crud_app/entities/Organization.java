@@ -21,13 +21,6 @@ public class Organization {
     @Column(name = "Location", unique = true, nullable = false)
     private String location;
 
-    /*
-    @OneToMany(targetEntity = Organization.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "organization_id", referencedColumnName = "id")
-    private List<Organization> organization;
-    */
-
-    // För att skapa Foreign Key, FK (organization_id) i Employee-tabellen  (("AppUser"))
     @OneToMany(mappedBy = "organization")
     @JsonIgnoreProperties("organization")
     private Set<Employee> employee;

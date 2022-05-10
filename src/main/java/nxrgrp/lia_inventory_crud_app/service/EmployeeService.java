@@ -1,7 +1,6 @@
 package nxrgrp.lia_inventory_crud_app.service;
 
 import nxrgrp.lia_inventory_crud_app.entities.Employee;
-import nxrgrp.lia_inventory_crud_app.entities.Organization;
 import nxrgrp.lia_inventory_crud_app.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +18,4 @@ public class EmployeeService {
     public List<Employee> findAll() {
         return employeeRepository.findAll();
     }
-/*
-    public List<Organization> findAll() {
-        return organizationRepository.findAll();
-    }
-*/
 }
