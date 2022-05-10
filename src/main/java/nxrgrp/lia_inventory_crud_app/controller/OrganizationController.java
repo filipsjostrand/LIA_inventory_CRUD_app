@@ -25,46 +25,6 @@ public class OrganizationController {
     }
 }
 
-// Gör getmapping för "{/id}"
+// Gör getmapping för "{/id}" (för att hitta specifik rad)
 
 // skapa postmapping och skapa employee
-
-
-
-    // Metod i OrganizationService som tar hand om getOrganization-anropet och returnerar en organisations-lista.
-
-    //public String employee() {
-
-
-
-        //@Autowired
-        //private Organization organizationRepository;
-
-        //OrganizationService organizationService;
-
-    /*
-    @GetMapping("api/organization")
-        public void getOrganization(@PathVariable("id") long id){
-        return organizationList
-                .stream()
-                .filter(organization -> Organization.getId() == id)
-                .findFirst()
-                .orElseThrow();
-        }
-
-
-@CrossOrigin(origins = "http://localhost:3000/")
-    @RestController
-    @RequestMapping("api/organization")
-    public class OrganizationController {
-
-    @Autowired
-    private Organization organizationRepository;
-
-    @GetMapping()
-    //public String employee() {
-    public List<Organization> getOrganization() {
-        return this.organizationRepository.findAll();
-    }
-}
-*/

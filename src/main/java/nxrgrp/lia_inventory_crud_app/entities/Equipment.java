@@ -10,7 +10,7 @@ public class Equipment {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-        @Column(name = "id", unique = true, nullable = false)   // employee_id should be null as default.
+        @Column(name = "id", unique = true, nullable = false)
         private Long id;
 
         @Column(name = "unique_id_serial", unique = true, nullable = false)
