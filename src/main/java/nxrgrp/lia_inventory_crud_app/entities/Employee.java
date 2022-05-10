@@ -11,19 +11,19 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column(name = "ID", unique = true, nullable = false)
+    @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "Firstname", unique = true, nullable = false)
+    @Column(name = "first_name", unique = true, nullable = false)
     private String first_name;
 
-    @Column(name = "Lastname", unique = true, nullable = false)
+    @Column(name = "last_name", unique = true, nullable = false)
     private String last_name;
 
-    @Column(name = "Email", unique = true, nullable = false)
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @Column(name = "Phone number", unique = true, nullable = false)
+    @Column(name = "phone_number", unique = true, nullable = false)
     private String phone_number;
 
     @ManyToOne(fetch = FetchType.LAZY)

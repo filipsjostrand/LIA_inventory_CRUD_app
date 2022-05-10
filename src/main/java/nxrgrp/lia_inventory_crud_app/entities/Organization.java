@@ -12,13 +12,13 @@ public class Organization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column(name = "ID", unique = true, nullable = false)
+    @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "Name", unique = true, nullable = false)
+    @Column(name = "name", unique = true, nullable = false)
     private String name;
 
-    @Column(name = "Location", unique = true, nullable = false)
+    @Column(name = "location", unique = true, nullable = false)
     private String location;
 
     @OneToMany(mappedBy = "organization")
