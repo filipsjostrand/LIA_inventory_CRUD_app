@@ -11,9 +11,9 @@ public class OrganizationService {
 
     OrganizationRepository organizationRepository;
 
-    public OrganizationService(OrganizationRepository organizationRepository) {
-        this.organizationRepository = organizationRepository;
-    }
+    //public OrganizationService(OrganizationRepository organizationRepository) {
+        //this.organizationRepository = organizationRepository;
+    //}
 
     public List<Organization> findAll() {
         return organizationRepository.findAll();
