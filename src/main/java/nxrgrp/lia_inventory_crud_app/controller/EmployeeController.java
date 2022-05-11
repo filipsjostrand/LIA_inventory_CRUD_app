@@ -23,10 +23,11 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    // Get all employees
     @GetMapping
     public List<Employee> getEmployeeList() {
-
         return employeeRepository.findAll();
     }
+
 }
 

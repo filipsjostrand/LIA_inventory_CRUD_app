@@ -26,10 +26,14 @@ public class Employee {
     @Column(name = "phone_number", unique = true, nullable = false)
     private String phone_number;
 
+/*
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id")
     private Organization organization;
-
+*/
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "organization_id")
+    private Organization organization;
 
     public Employee() {
 

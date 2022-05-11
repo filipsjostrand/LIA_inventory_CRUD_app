@@ -21,9 +21,22 @@ public class EquipmentController {
         return equipmentRepository.findAll();
     }
 
+    // Create Equipment rest api
     @PostMapping
     public void addEquipment(@RequestBody Equipment equipment) {
         equipmentRepository.save(equipment);
     }
+
+
+
+        /*
+    @GetMapping("/{id}")
+    public Employee getEmployeeId(@PathVariable("id") long id){
+        return EmployeeList
+                .stream()
+                .filter
+    }
+
+     */
 
 }

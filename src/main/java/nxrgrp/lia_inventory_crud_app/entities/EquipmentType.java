@@ -3,7 +3,7 @@ package nxrgrp.lia_inventory_crud_app.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "equipmenttype")
+@Table(name = "equipment_type")
 public class EquipmentType {
 
     @Id
@@ -14,6 +14,7 @@ public class EquipmentType {
 
     @Column(name = "name", unique = true, nullable = false)
     private String name;
+
 
     public EquipmentType(String name) {
         this.name = name;

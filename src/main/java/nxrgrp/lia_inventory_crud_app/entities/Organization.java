@@ -3,6 +3,8 @@ package nxrgrp.lia_inventory_crud_app.entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -24,6 +26,15 @@ public class Organization {
     @OneToMany(mappedBy = "organization")
     @JsonIgnoreProperties("organization")
     private Set<Employee> employee;
+
+    /*
+    @OneToMany(targetEntity = Employee.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "organization_id", referencedColumnName = "id")
+    private List<Employee> employeeList;
+    */
+
+    //private Collection<Employee> employee;
+
 
 
     public Organization(String name, String location) {
