@@ -16,10 +16,10 @@ public class Equipment {
         @Column(name = "unique_id_serial", unique = true, nullable = false)
         private String unique_id_serial;
 
-        @Column(name = "model_name", unique = true, nullable = false)
+        @Column(name = "model_name", nullable = false)
         private String model_name;
 
-        @Column(name = "date_of_purchase", unique = true, nullable = false)
+        @Column(name = "date_of_purchase", nullable = false)
         private String date_of_purchase;
 
         //@OneToOne(mappedBy = "equipment") OneToOne?????   ((employee_id (FK)))
