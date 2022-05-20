@@ -29,7 +29,7 @@ public class EquipmentController {
         return equipmentRepository.save(equipment);
     }
 
-// create equipment rest api
+    // create equipment rest api
     @GetMapping("{id}")
     public ResponseEntity<Equipment> getEquipmentById(@PathVariable Long id) {
 

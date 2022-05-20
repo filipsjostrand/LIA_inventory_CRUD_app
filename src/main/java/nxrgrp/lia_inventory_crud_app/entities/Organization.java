@@ -23,9 +23,12 @@ public class Organization {
     @Column(name = "location", unique = true, nullable = false)
     private String location;
 
+    
+    
     @OneToMany(mappedBy = "organization")
     @JsonIgnoreProperties("organization")
-    private Set<Employee> employee;
+    //private Set<Employee> employee;
+    private List<Employee> employee;
 
     /*
     @OneToMany(targetEntity = Employee.class,cascade = CascadeType.ALL)
