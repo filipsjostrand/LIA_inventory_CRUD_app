@@ -13,22 +13,18 @@ public class Organization {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "name", unique = true, nullable = false)
     private String name;
 
-    @Column(name = "location", unique = true, nullable = false)
     private String location;
 
     
-    
     @OneToMany(mappedBy = "organization")
-    @JsonIgnoreProperties("organization")
-    //private Set<Employee> employee;
-    private List<Employee> employee;
+    //@JsonIgnoreProperties("organization")
+    private Set<Employee> employee;
+    //private List<Employee> employee;
+
 
     /*
     @OneToMany(targetEntity = Employee.class,cascade = CascadeType.ALL)

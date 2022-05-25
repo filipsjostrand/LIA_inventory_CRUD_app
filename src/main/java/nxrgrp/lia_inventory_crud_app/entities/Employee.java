@@ -10,20 +10,14 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;    // employee_id default value should be null.
 
-    @Column(name = "id", unique = true, nullable = false)       // employee_id default value should be null.
-    private Long id;
-
-    @Column(name = "first_name", unique = true, nullable = false)
     private String first_name;
 
-    @Column(name = "last_name", unique = true, nullable = false)
     private String last_name;
 
-    @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @Column(name = "phone_number", unique = true, nullable = false)
     private String phone_number;
 
     @ManyToOne(fetch = FetchType.LAZY)
