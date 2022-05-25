@@ -1,6 +1,7 @@
 package nxrgrp.lia_inventory_crud_app.entities;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "equipment")
@@ -22,13 +23,10 @@ public class Equipment {
         @Column(name = "date_of_purchase", nullable = false)
         private String date_of_purchase;
 
-        //@OneToOne(mappedBy = "equipment") OneToOne?????   ((employee_id (FK)))
-        //@JsonIgnoreProperties("equipment")
-        //private Set<Employee> employee;
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "organization_id")
+        private Organization organization;
 
-    //organization_id (FK)
-
-    //equipment_type_id (FK)
 
         public Equipment(String unique_id_serial, String model_name, String date_of_purchase) {
             this.unique_id_serial = unique_id_serial;

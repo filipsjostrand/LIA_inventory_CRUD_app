@@ -96,6 +96,11 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>8.5.11</version>
+            </plugin>
+            <plugin>
                 <groupId>org.fastnate</groupId>
                 <artifactId>fastnate-maven-plugin</artifactId>
                 <version>1.5.0</version>

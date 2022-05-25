@@ -1,6 +1,8 @@
 package nxrgrp.lia_inventory_crud_app.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -16,12 +18,13 @@ public class Organization {
     private Long id;
 
     private String name;
-
     private String location;
 
     
     @OneToMany(mappedBy = "organization")
     //@JsonIgnoreProperties("organization")
+    //@JsonIgnoreProperties(ignoreUnknown = true)
+    //@JsonInclude(JsonInclude.Include.NON_DEFAULT)
     private Set<Employee> employee;
     //private List<Employee> employee;
 
